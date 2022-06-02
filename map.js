@@ -1,6 +1,3 @@
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
-<script>
 // Initialize map
 mapboxgl.accessToken =
   "pk.eyJ1Ijoiam9hbmRzbyIsImEiOiJja3libW4yMmEwZ3hiMm9xb3Rzajhhd2ZlIn0.cvrAHAQJ8RyrY8zNU1qmBA";
@@ -198,5 +195,3 @@ $(".region-items").on("click", function () {
   });
 });
 
-
-</script>
