@@ -1,4 +1,4 @@
-// Initialize map
+// Initialize map test
 mapboxgl.accessToken =
   "pk.eyJ1Ijoiam9hbmRzbyIsImEiOiJja3libW4yMmEwZ3hiMm9xb3Rzajhhd2ZlIn0.cvrAHAQJ8RyrY8zNU1qmBA";
 
