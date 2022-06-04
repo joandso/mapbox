@@ -1,4 +1,4 @@
-// Initialize map test
+// Initialize map
 mapboxgl.accessToken =
   "pk.eyJ1Ijoiam9hbmRzbyIsImEiOiJja3libW4yMmEwZ3hiMm9xb3Rzajhhd2ZlIn0.cvrAHAQJ8RyrY8zNU1qmBA";
 
@@ -183,11 +183,9 @@ $(".map-items").on("click", function () {
 
 
 $(".region-items").on("click", function () {
- 
-
   let myIndex = $(this).index();
   map.flyTo({
- center: regionLocations.features[myIndex].geometry.coordinates,
+    center: regionLocations.features[myIndex].geometry.coordinates,
     speed: 2,
     curve: 1,
     easing(t) {
