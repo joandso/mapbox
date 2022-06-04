@@ -79,7 +79,7 @@ function getRegionsGeoData() {
       },
         geometry: {
         type: "Point",
-        zoom: locationZoom,
+        id: locationZoom,
       },
       properties: {
         id: regionID,
@@ -181,7 +181,6 @@ $(".map-items").on("click", function () {
     }
   });
 });
-
 
 
 $(".region-items").on("click", function () {
