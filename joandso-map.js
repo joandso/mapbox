@@ -66,6 +66,7 @@ getGeoData();
 // For each collection item, grab hidden fields and convert to geojson proerty
 function getRegionsGeoData() {
   listRegions.each(function (index) {
+    let regionZoom = $(this).find(".region-zoom").val();
     let regionLat = $(this).find(".region-latitude").val();
     let regionLong = $(this).find(".region-longitude").val();
     let regionCoordinates = [regionLong, regionLat];
@@ -184,6 +185,7 @@ $(".region-items").on("click", function () {
     center: regionLocations.features[myIndex].geometry.coordinates,
     speed: 2,
     curve: 1,
+    zoom: regionZoom,
     easing(t) {
       return t;
     }
