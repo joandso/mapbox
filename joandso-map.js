@@ -185,7 +185,6 @@ $(".region-items").on("click", function () {
     center: regionLocations.features[myIndex].geometry.coordinates,
     speed: 2,
     curve: 1,
-    zoom: regionLocations.features[myIndex].regionZoom,
     easing(t) {
       return t;
     }
