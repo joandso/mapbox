@@ -80,10 +80,10 @@ function getRegionsGeoData() {
       },
      geometry: {
         type: "Point",
-        zoom: regionZoomValue
+        gozoom: regionZoomValue
       },
       properties: {
-        id: regionID,
+        id: regionID
       }
     };
 
@@ -189,7 +189,7 @@ $(".region-items").on("click", function () {
   map.flyTo({
     center: regionLocations.features[myIndex].geometry.coordinates,
     speed: 2,
-    zoom: regionLocations.features[myIndex].geometry.zoom,
+    zoom: regionLocations.features[myIndex].geometry.gozoom,
     curve: 1,
     easing(t) {
       return t;
