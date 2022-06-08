@@ -67,6 +67,7 @@ getGeoData();
 function getRegionsGeoData() {
   listRegions.each(function (index) {
     let regionZoom = $(this).find(".region-zoom").val();
+    let regionZoomValue = [regionZoom];
     let regionLat = $(this).find(".region-latitude").val();
     let regionLong = $(this).find(".region-longitude").val();
     let regionCoordinates = [regionLong, regionLat];
@@ -78,7 +79,7 @@ function getRegionsGeoData() {
         coordinates: regionCoordinates
       },
        properties: {
-        thiszoom: regionZoom
+        zoom: regionZoomValue
       },
       properties: {
         id: regionID,
@@ -187,7 +188,7 @@ $(".region-items").on("click", function () {
   map.flyTo({
     center: regionLocations.features[myIndex].geometry.coordinates,
     speed: 2,
-    zoom: regionLocations.features[myIndex].properties.thiszoom,
+    zoom: regionLocations.features[myIndex].properties.zoom,
     curve: 1,
     easing(t) {
       return t;
