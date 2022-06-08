@@ -77,7 +77,7 @@ function getRegionsGeoData() {
         type: "Point",
         coordinates: regionCoordinates
       },
-       properties {
+       properties: {
         thiszoom: regionZoom
       },
       properties: {
