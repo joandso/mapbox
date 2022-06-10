@@ -66,24 +66,18 @@ getGeoData();
 // For each collection item, grab hidden fields and convert to geojson proerty
 function getRegionsGeoData() {
   listRegions.each(function (index) {
-    let regionZoom = $(this).find(".region-zoom").val();
-    let regionZoomValue = [regionZoom];
-    let regionLat = $(this).find(".region-latitude").val();
-    let regionLong = $(this).find(".region-longitude").val();
-    let regionCoordinates = [regionLong, regionLat];
+    let locationLat = $(this).find(".region-latitude").val();
+    let locationLong = $(this).find(".region-longitude").val();
+    let coordinates = [locationLong, locationLat];
     let regionID = $(this).find(".region-id").val();
     let geoData = {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: regionCoordinates
-      },
-     geometry: {
-        type: "Point",
-        gozoom: regionZoomValue
+        coordinates: coordinates
       },
       properties: {
-        id: regionID
+        id: regionID,
       }
     };
 
@@ -195,4 +189,3 @@ $(".region-items").on("click", function () {
     }
   });
 });
-
