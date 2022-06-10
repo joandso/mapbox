@@ -78,10 +78,6 @@ function getRegionsGeoData() {
         type: "Point",
         coordinates: coordinates
       },
-       geometry: {
-        type: "Point",
-        gozoom: regionZoomValue
-      },
       properties: {
         id: regionID,
       }
