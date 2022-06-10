@@ -189,7 +189,6 @@ $(".region-items").on("click", function () {
   map.flyTo({
     center: regionLocations.features[myIndex].geometry.coordinates,
     speed: 2,
-    zoom: 7,
     curve: 1,
     easing(t) {
       return t;
