@@ -110,7 +110,6 @@ function addMapPoints() {
     }
   });
  
- 
 
 
   // When a click event occurs on a feature in the places layer, open a popup at the
@@ -156,6 +155,9 @@ function addMapPoints() {
 //When map is loaded initialize with data
 map.on("load", function (e) {
   addMapPoints();
+cluster: true,
+clusterMaxZoom: 14, // Max zoom to cluster points on
+clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
 });
 
 // disable map zoom when using scroll
