@@ -126,7 +126,7 @@ const features = map.queryRenderedFeatures(e.point, {
 layers: ['clusters']
 });
 const clusterId = features[0].properties.cluster_id;
-map.getSource('earthquakes').getClusterExpansionZoom(
+map.getSource('mapLocations').getClusterExpansionZoom(
 clusterId,
 (err, zoom) => {
 if (err) return;
